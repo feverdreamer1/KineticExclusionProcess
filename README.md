@@ -15,24 +15,24 @@ This project studies the non-equilibrium transport properties and macroscopic fl
 
 The repository includes Kinetic Monte Carlo (KMC) simulations written in Fortran, macroscopic hydrodynamic solvers, and Python visualization scripts to compare simulation data with theoretical predictions.
 
-## 📁 Repository Structure
+## Repository Structure
 
 The repository is organized into folders based on the parameter sweeps and physical studies performed during the research:
 
-* 📂 **`Caso_beta_0/`, `Caso_beta_05/`, `Caso_beta_1/`**
+*  **`Caso_beta_0/`, `Caso_beta_05/`, `Caso_beta_1/`**
     * Systematic studies of the collision parameter $\beta$ (0.0, 0.5, and 1.0). 
     * Each folder contains subdirectories for different temperature gradients and density boundary conditions.
     * Includes the KMC simulation code (`kep_simple_fixed_...f90`), hydrodynamic solvers (`hydro_solver...f90`), Python plotting scripts, and the resulting density/temperature data (`.dat` and `.csv`).
-* 📂 **`Estudio_densidad/`**
+*  **`Estudio_densidad/`**
     * Parametric study isolating the effect of the average background density ($\rho = 0.2, 0.5, 0.9$).
     * Contains comparison plots (`comparacion_density.png`) and the corresponding source codes.
-* 📂 **`Estudio_termico/`**
+*  **`Estudio_termico/`**
     * Parametric study isolating the effect of extreme temperature gradients ($T = 2, 5, 10$).
     * Contains comparison plots (`comparacion_thermal.png`).
-* 📂 **`KMP_Validation/` & `SSEP_Validation/`**
+*  **`KMP_Validation/` & `SSEP_Validation/`**
     * Validation of the KMC algorithm against exactly solvable canonical models.
     * Contains `kmp_sim.f90` (pure heat conduction limit) and `ssep_sim.f90` (pure mass diffusion limit), along with validation plots.
-* 📂 **`Caso_Canonico(FALLA)/`**
+*  **`Caso_Canonico(FALLA)/`**
     * Study of the canonical ensemble where the Local Equilibrium Approximation (LEA) breaks down, including the breakdown analysis plots (`analisis_ruptura_LEA.png`).
 * 📂 **`FiniteSizeEffects/` & `Variable_beta/`**
     * Additional data and scripts analyzing boundary interactions and continuous variations of the coupling parameter.
