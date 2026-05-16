@@ -34,5 +34,5 @@ The repository is organized into folders based on the parameter sweeps and physi
     * Contains `kmp_sim.f90` (pure heat conduction limit) and `ssep_sim.f90` (pure mass diffusion limit), along with validation plots.
 *  **`Caso_Canonico(FALLA)/`**
     * Study of the canonical ensemble where the Local Equilibrium Approximation (LEA) breaks down, including the breakdown analysis plots (`analisis_ruptura_LEA.png`).
-* 📂 **`FiniteSizeEffects/` & `Variable_beta/`**
+*  **`FiniteSizeEffects/` & `Variable_beta/`**
     * Additional data and scripts analyzing boundary interactions and continuous variations of the coupling parameter.
