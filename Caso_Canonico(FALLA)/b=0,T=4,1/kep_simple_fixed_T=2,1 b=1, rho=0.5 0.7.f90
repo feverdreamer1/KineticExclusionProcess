@@ -1,11 +1,4 @@
-!===============================================================================
-! KEP_SIMPLE_FIXED_CORRECTED.F90
-! Correcciones:
-! 1. Paredes termicas fijas (N constante).
-! 2. Calculo de errores estadisticos.
-!===============================================================================
-
-program kep_simple_fixed
+program kep
     implicit none
     ! Precision
     integer, parameter :: dp = selected_real_kind(15, 307)
@@ -453,5 +446,4 @@ contains
         real(dp) :: r
         call random_number(r)
     end function get_random
-
-end program kep_simple_fixed
+end program kep
