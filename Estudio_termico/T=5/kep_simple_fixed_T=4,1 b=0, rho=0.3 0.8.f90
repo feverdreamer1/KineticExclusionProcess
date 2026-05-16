@@ -1,11 +1,4 @@
-!===============================================================================
-! KEP_FINAL_FULL.F90
-! - Modelo: Transporte Acoplado (Grand Canonical / Reservorios).
-! - Errores: Calculo de desviacion estandar de la media.
-! - Output: Escritura de resultados intermedios durante la simulacion.
-!===============================================================================
-
-program kep_final_full
+program kep
     implicit none
     ! Precision
     integer, parameter :: dp = selected_real_kind(15, 307)
@@ -14,7 +7,7 @@ program kep_final_full
     !---------------------------------------------------------------------------
     ! 1. PARAMETROS FISICOS (Ajustar segun necesidad)
     !---------------------------------------------------------------------------
-    integer, parameter :: L = 200            ! Tamaño red
+    integer, parameter :: L = 200            ! TamaÃ±o red
     
     ! Temperaturas
     real(dp), parameter :: T_left = 5.0_dp
@@ -341,4 +334,4 @@ contains
         call random_number(r)
     end function get_random
 
-end program kep_final_full
+end program kep
