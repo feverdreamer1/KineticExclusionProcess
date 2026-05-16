@@ -9,15 +9,15 @@ This repository contains the source code, numerical solvers, and raw data associ
 **Author:** Sharan Haresh Belani  
 **Tutor:** Dr. Pablo Ignacio Hurtado Fernández  
 
-## 📌 Overview
+## Overview
 
 This project studies the non-equilibrium transport properties and macroscopic fluctuations of the **Kinetic Exclusion Process (KEP)**. By dynamically coupling density and energy fields through microscopic jump rules, the KEP captures complex cross-transport phenomena such as the Soret and Dufour effects. 
 
-The repository includes Kinetic Monte Carlo (KMC) simulations written in Fortran, macroscopic hydrodynamic solvers, and Python visualization scripts to compare simulation data with Macroscopic Fluctuation Theory (MFT) predictions.
+The repository includes Kinetic Monte Carlo (KMC) simulations written in Fortran, macroscopic hydrodynamic solvers, and Python visualization scripts to compare simulation data with theoretical predictions.
 
 ## 📁 Repository Structure
 
-The repository is organized into thematic folders based on the parameter sweeps and physical studies performed during the research:
+The repository is organized into folders based on the parameter sweeps and physical studies performed during the research:
 
 * 📂 **`Caso_beta_0/`, `Caso_beta_05/`, `Caso_beta_1/`**
     * Systematic studies of the collision parameter $\beta$ (0.0, 0.5, and 1.0). 
@@ -36,15 +36,3 @@ The repository is organized into thematic folders based on the parameter sweeps 
     * Study of the canonical ensemble where the Local Equilibrium Approximation (LEA) breaks down, including the breakdown analysis plots (`analisis_ruptura_LEA.png`).
 * 📂 **`FiniteSizeEffects/` & `Variable_beta/`**
     * Additional data and scripts analyzing boundary interactions and continuous variations of the coupling parameter.
-
-## 🚀 Getting Started & Compilation
-
-### Prerequisites
-- **Fortran Compiler:** `gfortran` (or Intel `ifort`) is strictly required to compile the KMC simulations and hydrodynamic solvers.
-- **Python 3:** Required for data visualization. Need `numpy`, `matplotlib`, and `pandas`.
-
-### Running Fortran Simulations
-Each subfolder contains specific `.f90` files for the simulation state. To run a simulation, compile the Fortran file with high optimization flags (`-O3`) to accelerate the Monte Carlo loop:
-```bash
-gfortran -O3 -o kep_sim kep_simple_fixed_T=4,1_b=0.f90
-./kep_sim
